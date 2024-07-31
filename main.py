@@ -17,7 +17,7 @@ def calculation(left_value: int, input_value: tuple) -> int:
     raise Exception("invalid operation")
 
 
-def zero(input_value: Optional[tuple] = None) -> Optional[int]:
+def zero(input_value: Optional[tuple] = None) -> int:
     """
     >>> zero(plus(zero()))
     0
@@ -35,7 +35,7 @@ def zero(input_value: Optional[tuple] = None) -> Optional[int]:
     return calculation(0, input_value) if input_value else 0
 
 
-def one(input_value: Optional[tuple] = None) -> Optional[int]:
+def one(input_value: Optional[tuple] = None) -> int:
     """
     >>> one(plus(one()))
     2
@@ -45,7 +45,7 @@ def one(input_value: Optional[tuple] = None) -> Optional[int]:
     return calculation(1, input_value) if input_value else 1
 
 
-def two(input_value: Optional[tuple] = None) -> Optional[int]:
+def two(input_value: Optional[tuple] = None) -> int:
     """
     >>> two()
     2
@@ -53,7 +53,7 @@ def two(input_value: Optional[tuple] = None) -> Optional[int]:
     return calculation(2, input_value) if input_value else 2
 
 
-def three(input_value: Optional[tuple] = None) -> Optional[int]:
+def three(input_value: Optional[tuple] = None) -> int:
     """
     >>> three()
     3
@@ -61,7 +61,7 @@ def three(input_value: Optional[tuple] = None) -> Optional[int]:
     return calculation(3, input_value) if input_value else 3
 
 
-def four(input_value: Optional[tuple] = None) -> Optional[int]:
+def four(input_value: Optional[tuple] = None) -> int:
     """
     >>> four(times(five()))
     20
@@ -69,7 +69,7 @@ def four(input_value: Optional[tuple] = None) -> Optional[int]:
     return calculation(4, input_value) if input_value else 4
 
 
-def five(input_value: Optional[tuple] = None) -> Optional[int]:
+def five(input_value: Optional[tuple] = None) -> int:
     """
     >>> five()
     5
@@ -77,7 +77,7 @@ def five(input_value: Optional[tuple] = None) -> Optional[int]:
     return calculation(5, input_value) if input_value else 5
 
 
-def six(input_value: Optional[tuple] = None) -> Optional[int]:
+def six(input_value: Optional[tuple] = None) -> int:
     """
     >>> six()
     6
@@ -85,7 +85,7 @@ def six(input_value: Optional[tuple] = None) -> Optional[int]:
     return calculation(6, input_value) if input_value else 6
 
 
-def seven(input_value: Optional[tuple] = None) -> Optional[int]:
+def seven(input_value: Optional[tuple] = None) -> int:
     """
     >>> seven(minus(three()))
     4
@@ -93,7 +93,7 @@ def seven(input_value: Optional[tuple] = None) -> Optional[int]:
     return calculation(7, input_value) if input_value else 7
 
 
-def eight(input_value: Optional[tuple] = None) -> Optional[int]:
+def eight(input_value: Optional[tuple] = None) -> int:
     """
     >>> eight()
     8
@@ -101,7 +101,7 @@ def eight(input_value: Optional[tuple] = None) -> Optional[int]:
     return calculation(8, input_value) if input_value else 8
 
 
-def nine(input_value: Optional[tuple] = None) -> Optional[int]:
+def nine(input_value: Optional[tuple] = None) -> int:
     """
     >>> nine(divided_by(three()))
     3
@@ -109,19 +109,19 @@ def nine(input_value: Optional[tuple] = None) -> Optional[int]:
     return calculation(9, input_value) if input_value else 9
 
 
-def plus(value: int):
+def plus(value: int) -> tuple:
     return ("+", value)
 
 
-def minus(value: int):
+def minus(value: int) -> tuple:
     return ("-", value)
 
 
-def times(value: int):
+def times(value: int) -> tuple:
     return ("*", value)
 
 
-def divided_by(value: int):
+def divided_by(value: int) -> tuple:
     return ("/", value)
 
 
