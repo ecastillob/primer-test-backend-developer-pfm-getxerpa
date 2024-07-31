@@ -53,3 +53,8 @@ Validar con los siguientes ejemplos
 ## Plazo de entrega
 
 3 horas desde el envío del correo
+
+
+## Dependencias
+
+Se requiere al menos Python 3.8 para ejecutar el código fuente.
